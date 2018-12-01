@@ -18,6 +18,6 @@ from django.conf.urls import url, include
 
 urlpatterns = [
     url(r"^admin/", include(admin.site.urls)),
-    url(r'^quiz/', include('quiz.urls')),
-    url(r'^/', include('eshalahome.urls')),
+    url(r"^quiz/", include('quiz.urls')),
+    url(r"^$", include('eshalahome.urls')),
 ]

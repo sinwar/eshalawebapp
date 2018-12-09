@@ -16,11 +16,17 @@ def listpdf(request):
 	pdflist = pdfs.objects.all();
 	pkey = []
 	title = []
+	urls = []
 	for i in pdflist:
 		pkey.append(i.pk);
 		title.append(i.title);
+		filename = i.file.name
+		k = filename.find("/")
+		filename = filename[k::]
+		urls.append(filename)
 
-	pdfdetaillist = zip(pkey, title)
+
+	pdfdetaillist = zip(pkey, title, urls)
 	return render(request, 'pdflist.html', {'pdfdetaillist' : pdfdetaillist})
 
 

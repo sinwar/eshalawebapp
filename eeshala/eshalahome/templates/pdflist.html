@@ -52,7 +52,7 @@
 		            <a href="{% url 'quiz_index' %}" id="account_notification" ></i>{% trans "QUIZ" %} </a>
 		        </li>
 		        <li>
-		            <a href="#"> {% trans "PDF" %}</a>
+		            <a href="{% url "listpdf" %}"> {% trans "PDF" %}</a>
 		        </li>
 		        <li>
 		            <a href="#"> {% trans "APPS" %}</a>
@@ -67,7 +67,28 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-md-12" style="text-align: center; margin-top: 10%;">
-					<button type="button" class="btn btn-default"><a href="{% url 'quiz_index' %}" style="color: black;">{% trans "QUIZ LIST" %}</a></button>
+					<button type="button" class="btn btn-default">{% trans "PDF LIST" %}</button>
+					<table class="table table-bordered table-striped table-hover" style="margin-top: 5%;">
+
+				  <thead class="thead-light">
+					<tr>
+					  <th scope="col" style="text-align: center;">{% trans "PDF Name" %}</th>
+					</tr>
+				  </thead>
+
+				  <tbody>
+			
+				  {% for i, j, k in pdfdetaillist %}
+					  <tr>
+					  	<td>
+							<a href="{{ k }}" target="_blank" style="text-transform: capitalize;">
+							  {{ j }}
+							</a>
+						</td>
+					  </tr>
+			  	  {% endfor %}
+				</div>
+			</div>
 		</div>
 
 		

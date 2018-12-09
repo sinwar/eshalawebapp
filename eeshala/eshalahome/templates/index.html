@@ -74,19 +74,21 @@
               <div class="container text-center my-auto" >
                 <div class="row">
                   <div class="col-md-12" style="padding-top: 5%; font-style: italic;" id="quote">
-                    <h3>“Dream is not the thing you see in sleep but is that thing that doesn't let you sleep.”</h3>
+                    <h3>“Dream is not the thing you see in sleep but is that thing that doesn't let you sleep”</h3>
                       <h3 style="text-align: right;">- APJ Abdul Kalam</h3>
                   </div>
                   <div class="col-md-12" style="padding: 25%;">
 
                     <img src="{% static "img/eshala_symbol.png" %}" class="img-responsive" style="background-color: white; padding: 2%; height: auto; width: 100%;">
+                    <h2>hello</h2>
                     <h3 class="mb-5">
                     </h3>
                     <br><br>
-                    <a class="js-scroll-trigger" href="#about"><button class="btn btn-xl" style="background-color: #33a9f7;"">Find Out More</button></a>
-                    <a class="js-scroll-trigger" href="#about"><button class="btn btn-xl" style="background-color: #33a9f7;"">Find Out More</button></a>
-                    <a class="js-scroll-trigger" href="#about"><button class="btn btn-xl" style="background-color: #33a9f7;"">Find Out More</button></a>
-                    <a class="js-scroll-trigger" href="#about"><button class="btn btn-xl" style="background-color: #33a9f7;"">Find Out More</button></a>
+
+                    <a class="js-scroll-trigger" href="{% url "quiz_index" %}"><button class="btn btn-xl" style="background-color: #33a9f7;"">Quizzes</button></a>
+                    <a class="js-scroll-trigger" href="{% url "listpdf" %}"><button class="btn btn-xl" style="background-color: #33a9f7;"">PDFs</button></a>
+                    <a class="js-scroll-trigger" href="#about"><button class="btn btn-xl" style="background-color: #33a9f7;"">APPs</button></a>
+                    <a class="js-scroll-trigger" href="#about"><button class="btn btn-xl" style="background-color: #33a9f7;"">Videos</button></a>
                   </div>
                 </div>
               </div>
@@ -108,7 +110,10 @@
             <h3 class="mb-5">
             </h3>
             <br><br>
-            <a class="js-scroll-trigger" href="#about"><button class="btn btn-xl" style="background-color: #33a9f7;">Find Out More</button></a>
+            <a class="js-scroll-trigger" href="{% url "quiz_index" %}"><button class="btn btn-xl" style="background-color: #33a9f7; margin: 1%;">QUIZZEs</button></a>
+            <a class="js-scroll-trigger" href="{% url "listpdf" %}"><button class="btn btn-xl" style="background-color: #33a9f7;"">PDFs</button></a>
+            <a class="js-scroll-trigger" href="#about"><button class="btn btn-xl" style="background-color: #33a9f7;margin: 1%;">APPs</button></a>
+            <a class="js-scroll-trigger" href="#about"><button class="btn btn-xl" style="background-color: #33a9f7;margin: 1%;">VIDEOs</button></a>
           </div>
           <div class="overlay"></div>
         </div> 

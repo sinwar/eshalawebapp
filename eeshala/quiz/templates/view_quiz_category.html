@@ -3,21 +3,41 @@
 {% block title %}{% trans "Quizzes related to" %} {{ category.category }}{% endblock %}
 
 {% block content %}
-<h1>{% trans "Quizzes in the" %} <strong>{{ category.category }} </strong>{% trans "category" %}</h1>
+<div class="row">
+        <div class="col-md-12" style="text-align: center; margin-top: 10%;">
+            <button type="button" class="btn btn-defult">{% trans "Quizzes in the" %} <strong>{{ category.category }} </strong>{% trans "category" %}</button>
+            <table class="table table-bordered table-striped table-hover" style="margin-top: 5%;">
 
-  {% with object_list as quizzes %}
-    {% if quizzes %}
-        <ul>
-        {% for quiz in quizzes %}
-            <li>
-			  <a href="{% url 'quiz_question' quiz_name=quiz.url %}">
-				{{ quiz.title }}
-			  </a>
-			</li>
-        {% endfor %}
-        </ul>
-    {% else %}
-        <p>{% trans "There are no quizzes" %}</p>
-    {% endif %}
-  {% endwith %}
+                  <thead class="thead-light">
+                    <tr>
+                      <th scope="col" style="text-align: center;">{% trans "Quiz Name" %}</th>
+                    </tr>
+                  </thead>
+
+                  <tbody>
+            
+                  {% with object_list as quizzes %}
+                    {% if quizzes %}
+                        
+                        {% for quiz in quizzes %}
+                          <tr>
+                            <td>
+                                <a href="{% url 'quiz_question' quiz_name=quiz.url %}" style="text-transform: capitalize;">
+                                  {{ quiz.title }}
+                                </a>
+                            </td>
+                          </tr>
+                            
+                        {% endfor %}
+                        
+                    {% else %}
+                        <tr>
+                            <td>{% trans "There are no quizzes" %}</td>
+                        </tr>
+                    {% endif %}
+                  {% endwith %}
+              
+            </ul>
+        </div>
+</div>
 {% endblock %}

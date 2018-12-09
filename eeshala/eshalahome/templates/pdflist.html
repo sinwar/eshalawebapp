@@ -1,0 +1,74 @@
+{% load static %}
+{% load i18n %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>eShala</title>
+    <link rel="icon" href="img/pencil.jpg">
+
+    <!-- meta tags for facebook share-->
+    <meta property="og:title" content="eShala - learn Anything. Anywhere">
+    <meta property="og:description" content="We are on a mission to share Knowledge and change the Learning Process with offering Online education from last mile of India">
+    <meta property="og:image" content="https://sinwar.github.io/webeshala/img/wall.jpg">
+    <meta property="og:url" content="http://eshala.org">
+
+    <!-- meta tag to detect mobile devices -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Bootstrap Core CSS -->
+
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+
+    <link href="{% static "vendor/fontawesome-free/css/all.min.css" %}" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+    <link href="{% static "vendor/simple-line-icons/css/simple-line-icons.css" %}" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="{% static "css/stylish-portfolio.css" %}" rel="stylesheet">
+    <link href="{% static "css/base.css" %}" rel="stylesheet">
+
+  </head>
+
+  <body id="page-top">
+
+		<nav class="navbar navbar-fixed-top">
+		  <div class="container">
+		    <div class="navbar-header">
+		      <a class="navbar-brand" href="#">ESHALA</a>
+		    </div>
+		    
+		    <ul class="nav navbar-nav navbar-right nav-page">
+		      	<li>
+		            <a href="{% url 'quiz_index' %}" id="account_notification" ></i>{% trans "QUIZ" %} </a>
+		        </li>
+		        <li>
+		            <a href="#"> {% trans "PDF" %}</a>
+		        </li>
+		        <li>
+		            <a href="#"> {% trans "APPS" %}</a>
+		        </li>
+		   
+		        <li><a href="#">{% trans "VIDEOS" %}</a></li>
+		        <li><a href="#">{% trans "CONTACT US" %}</a></li>
+		    </ul>
+		  </div>
+		</nav>
+
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12" style="text-align: center; margin-top: 10%;">
+					<button type="button" class="btn btn-default"><a href="{% url 'quiz_index' %}" style="color: black;">{% trans "QUIZ LIST" %}</a></button>
+		</div>
+
+		
+	</body>

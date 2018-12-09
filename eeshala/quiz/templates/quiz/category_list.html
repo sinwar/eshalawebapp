@@ -3,16 +3,32 @@
 {% block title %}{% trans "All Quizzes" %}{% endblock %}
 
 {% block content %}
-<h2>{% trans "Category list" %}</h2>
+<div class="row">
+		<div class="col-md-12" style="text-align: center; margin-top: 10%;">
+			<button type="button" class="btn btn-info"><a href="{% url 'quiz_index' %}" style="color: black;">{% trans "QUIZ LIST" %}</a></button>
+			<button type="button" class="btn btn-defualt"><a href="{% url 'quiz_category_list_all' %}" style="color: black;">{% trans "CATEGORY LIST" %}</a></button>
+			<table class="table table-bordered table-striped table-hover" style="margin-top: 5%;">
 
-<ul>
-  {% for cat in category_list %}
-  <li>
-	<a href="{% url 'quiz_category_list_matching' category_name=cat.category %}">
-	  {{ cat.category }}
-	</a>
-  </li>
-  {% endfor %}
-</ul>
+				  <thead class="thead-light">
+					<tr>
+					  <th scope="col" style="text-align: center;">{% trans "Quiz Category" %}</th>
+					</tr>
+				  </thead>
+
+				  <tbody>
+			
+				  {% for cat in category_list %}
+			  <tr>
+			  	<td>
+					<a href="{% url 'quiz_category_list_matching' category_name=cat.category %}" style="text-transform: capitalize;">
+					  {{ cat.category }}
+					</a>
+				</td>
+			  </tr>
+			  {% endfor %}
+			</ul>
+		</div>
+</div>
+
 
 {% endblock %}

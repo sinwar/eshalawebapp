@@ -5,12 +5,12 @@
 
 {% block content %}
 	<div class="row">
-		<div class="col-md-12" style="text-align: center; margin-top: 10%;">
-			<button type="button" class="btn btn-default"><a href="{% url 'quiz_index' %}" style="color: black;">{% trans "QUIZ LIST" %}</a></button>
-			<button type="button" class="btn btn-info"><a href="{% url 'quiz_category_list_all' %}" style="color: black;">{% trans "CATEGORY LIST" %}</a></button>
+		<div class="col-md-12" style="text-align: center; margin-top: 5%;font-family: 'Play', sans-serif;">
+			<a href="{% url 'quiz_index' %}" style="color: black;"><button type="button" class="btn btn-default btn-lg">{% trans "QUIZ LIST" %}</button></a>
+			<a href="{% url 'quiz_category_list_all' %}" style="color: black;"><button type="button" class="btn btn-info btn-lg">{% trans "CATEGORY LIST" %}</button></a>
 			
 		    {% if quiz_list %}
-				<table class="table table-bordered table-striped table-hover" style="margin-top: 5%;">
+				<table class="table table-bordered table-striped table-hover" style="margin-top: 5%; text-transform: capitalize;">
 
 				  <thead class="thead-light">
 					<tr>
@@ -20,7 +20,7 @@
 					</tr>
 				  </thead>
 
-				  <tbody>
+				  <tbody style="font-size: 15px;">
 
 		        {% for quiz in quiz_list %}
 
@@ -29,7 +29,7 @@
 					  <td>{{ quiz.category }}</td>
 					  <td>
 						<a href="{% url 'quiz_start_page' slug=quiz.url %}" >
-						  {% trans "Go to Quiz dashboard" %}
+						  {% trans "Quiz dashboard" %}
 						</a>
 					</tr>
 

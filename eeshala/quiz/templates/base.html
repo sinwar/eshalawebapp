@@ -9,8 +9,10 @@
 <meta name="description" content="{% block description %}{% endblock %}">
 
 <!-- styles -->
-<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+<link href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet">
 <link href="{% static "base.css" %}" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Play|Roboto" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
 <!--[if lt IE 9]>
 <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
@@ -20,28 +22,38 @@
 
 <body>
 
-<nav class="navbar navbar-fixed-top">
-  <div class="container">
-    <div class="navbar-header">
-      <a class="navbar-brand" href="#">ESHALA</a>
+<div class="container">
+  <div class="row">
+    <div class="col-md-4">
+      <img src="{% static "img/eshala_symbol.png" %}" height="50%" width="50%" style="padding: 5%;">
     </div>
-    
-    <ul class="nav navbar-nav navbar-right nav-page">
-      	<li>
-            <a href="{% url 'quiz_index' %}" id="account_notification" ></i>{% trans "QUIZ" %} </a>
-        </li>
-        <li>
-            <a href="{% url "listpdf" %}"> {% trans "PDF" %}</a>
-        </li>
-        <li>
-            <a href="#"><i class="fa fa-power-off"></i> {% trans "APPS" %}</a>
-        </li>
-   
-        <li><a href="#">{% trans "VIDEOS" %}</a></li>
-        <li><a href="#">{% trans "CONTACT US" %}</a></li>
-    </ul>
   </div>
+</div>
+
+
+<nav class="navbar">
+  <div class="container-fluid">
+        <ul class="nav navbar-nav nav-page">
+            <li class="active">
+                <a href="{% url 'quiz_index' %}" id="account_notification" ><i class="fa fa-question-circle-o" style="font-size:20px; margin-right: 7px;"></i> {% trans "QUIZ" %} </a> 
+            </li>
+            <li>
+                <a href="{% url "listpdf" %}"> <i class="fa fa-file-text-o" style="font-size:20px; margin-right: 7px;"></i> {% trans "PDF" %}</a>
+            </li>
+            <li>
+                <a href="{% url "apps" %}"> <i class="fa fa-android" style="font-size:20px; margin-right: 7px;"></i> {% trans "APPS" %}</a>
+            </li> 
+       
+            <li>
+                <a href="{% url "videos" %}">  <i class="fa fa-youtube-play" style="font-size:20px; margin-right: 7px;"></i>{% trans "VIDEOS" %}</a>
+            </li> 
+            <li>
+              <a href="{% url "contact" %}"><i class="fa fa-phone" style="font-size:20px; margin-right: 7px;"></i>{% trans "CONTACT" %}</a>
+            </li>
+        </ul>
+      </div>
 </nav>
+
 
 
 

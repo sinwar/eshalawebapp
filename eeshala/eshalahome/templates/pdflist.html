@@ -29,9 +29,10 @@
 
     <!-- Custom Fonts -->
 
-    <link href="{% static "vendor/fontawesome-free/css/all.min.css" %}" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
     <link href="{% static "vendor/simple-line-icons/css/simple-line-icons.css" %}" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Play|Roboto" rel="stylesheet">
 
     <!-- Custom CSS -->
     <link href="{% static "css/stylish-portfolio.css" %}" rel="stylesheet">
@@ -41,33 +42,41 @@
 
   <body id="page-top">
 
-		<nav class="navbar navbar-fixed-top">
-		  <div class="container">
-		    <div class="navbar-header">
-		      <a class="navbar-brand" href="#">ESHALA</a>
+		<div class="container">
+		  <div class="row">
+		    <div class="col-md-4">
+		      <img src="{% static "img/eshala_symbol.png" %}" height="50%" width="50%" style="padding: 5%;">
 		    </div>
-		    
-		    <ul class="nav navbar-nav navbar-right nav-page">
-		      	<li>
-		            <a href="{% url 'quiz_index' %}" id="account_notification" ></i>{% trans "QUIZ" %} </a>
-		        </li>
-		        <li>
-		            <a href="{% url "listpdf" %}"> {% trans "PDF" %}</a>
-		        </li>
-		        <li>
-		            <a href="#"> {% trans "APPS" %}</a>
-		        </li>
-		   
-		        <li><a href="#">{% trans "VIDEOS" %}</a></li>
-		        <li><a href="#">{% trans "CONTACT US" %}</a></li>
-		    </ul>
 		  </div>
+		</div>
+		<nav class="navbar">
+		  <div class="container-fluid">
+		        <ul class="nav navbar-nav nav-page">
+		            <li>
+		                <a href="{% url 'quiz_index' %}" id="account_notification" ><i class="fa fa-question-circle-o" style="font-size:20px; margin-right: 7px;"></i> {% trans "QUIZ" %} </a> 
+		            </li>
+		            <li class="active">
+		                <a href="{% url "listpdf" %}"> <i class="fa fa-file-text-o" style="font-size:20px; margin-right: 7px;"></i> {% trans "PDF" %}</a>
+		            </li>
+		            <li>
+		                <a href="{% url "apps" %}"> <i class="fa fa-android" style="font-size:20px; margin-right: 7px;"></i> {% trans "APPS" %}</a>
+		            </li> 
+		       
+		            <li>
+		                <a href="{% url "videos" %}">  <i class="fa fa-youtube-play" style="font-size:20px; margin-right: 7px;"></i>{% trans "VIDEOS" %}</a>
+		            </li> 
+		            <li>
+		              <a href="{% url "contact" %}"><i class="fa fa-phone" style="font-size:20px; margin-right: 7px;"></i>{% trans "CONTACT" %}</a>
+		            </li>
+		        </ul>
+		      </div>
 		</nav>
+
 
 		<div class="container">
 			<div class="row">
-				<div class="col-md-12" style="text-align: center; margin-top: 10%;">
-					<button type="button" class="btn btn-default">{% trans "PDF LIST" %}</button>
+				<div class="col-md-12" style="text-align: center; margin-top: 4%;">
+					<button type="button" class="btn btn-default btn-lg">{% trans "PDF LIST" %}</button>
 					<table class="table table-bordered table-striped table-hover" style="margin-top: 5%;">
 
 				  <thead class="thead-light">
@@ -76,7 +85,7 @@
 					</tr>
 				  </thead>
 
-				  <tbody>
+				  <tbody style="font-size: 15px;">
 			
 				  {% for i, j, k in pdfdetaillist %}
 					  <tr>

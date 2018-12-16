@@ -4,9 +4,9 @@
 
 {% block content %}
 <div class="row">
-		<div class="col-md-12" style="text-align: center; margin-top: 10%;">
-			<button type="button" class="btn btn-info"><a href="{% url 'quiz_index' %}" style="color: black;">{% trans "QUIZ LIST" %}</a></button>
-			<button type="button" class="btn btn-defualt"><a href="{% url 'quiz_category_list_all' %}" style="color: black;">{% trans "CATEGORY LIST" %}</a></button>
+		<div class="col-md-12" style="text-align: center; margin-top: 5%;font-family: 'Play', sans-serif;">
+			<a href="{% url 'quiz_index' %}" style="color: black;"><button type="button" class="btn btn-info btn-lg">{% trans "QUIZ LIST" %}</button></a>
+			<a href="{% url 'quiz_category_list_all' %}" style="color: black;"><button type="button" class="btn btn-default btn-lg">{% trans "CATEGORY LIST" %}</button></a>
 			<table class="table table-bordered table-striped table-hover" style="margin-top: 5%;">
 
 				  <thead class="thead-light">
@@ -15,7 +15,7 @@
 					</tr>
 				  </thead>
 
-				  <tbody>
+				  <tbody style="font-size: 15px;">
 			
 				  {% for cat in category_list %}
 			  <tr>

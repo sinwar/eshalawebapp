@@ -5,17 +5,18 @@
 {% endblock %}
 
 {% block content %}
+
 <div class="row">
-		<div class="col-md-12" style="text-align: center; margin-top: 10%;">
-			<button type="button" class="btn btn-default" style="text-transform: capitalize;">{{ quiz.title }}</button> <br> <br>
-			<button type="button" class="btn btn-default btn-sm">{% trans "Category" %}: {{ quiz.category }}</button>
+		<div class="col-md-12" style="text-align: center; margin-top: 5%;font-family: 'Play', sans-serif;">
+			<button type="button" class="btn btn-default btn-lg" style="text-transform: capitalize;">{{ quiz.title }}</button> <br> <br>
+			<button type="button" class="btn btn-default"><strong>{% trans "Category" %} </strong>: {{ quiz.category }}</button>
 			
 			{% if quiz.single_attempt %}
 			  <h4>{% trans "You will only get one attempt at this quiz" %}.</h4>
 			{% endif %}
 			<br><br>
 			<h5><strong>Description</strong> - {{ quiz.description }}</h5><br>
-			<button type="button" class="btn btn-info"><a href="{% url 'quiz_question' quiz_name=quiz.url %}" style="color: black;">{% trans "Start Quiz" %}</a></button>
+			<a href="{% url 'quiz_question' quiz_name=quiz.url %}"><button type="button" class="btn btn-info btn-lg" style="margin-top: 10%;color: black;">{% trans "Start Quiz" %}</button></a>
 		</div>
 </div>
 {% endblock %}

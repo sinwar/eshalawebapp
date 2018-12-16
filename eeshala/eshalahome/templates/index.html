@@ -30,6 +30,7 @@
     <link href="{% static "vendor/fontawesome-free/css/all.min.css" %}" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
     <link href="{% static "vendor/simple-line-icons/css/simple-line-icons.css" %}" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Play|Roboto" rel="stylesheet">
 
     <!-- Custom CSS -->
     <link href="{% static "css/stylish-portfolio.css" %}" rel="stylesheet">
@@ -39,32 +40,6 @@
   <body id="page-top">
 
     <!-- Navigation -->
-    <a class="menu-toggle rounded" href="#">
-      <i class="fas fa-bars"></i>
-    </a>
-    <nav id="sidebar-wrapper">
-      <ul class="sidebar-nav">
-        <li class="sidebar-brand">
-          <a class="js-scroll-trigger" href="#page-top">eShala</a>
-        </li>
-        <li class="sidebar-nav-item">
-          <a class="js-scroll-trigger" href="#page-top">Home</a>
-        </li>
-        <li class="sidebar-nav-item">
-          <a class="js-scroll-trigger" href="#about">About</a>
-        </li>
-        <li class="sidebar-nav-item">
-          <a class="js-scroll-trigger" href="#portfolio">Apps</a>
-        </li>
-        <li class="sidebar-nav-item">
-          <a class="js-scroll-trigger" href="#services">Services</a>
-        </li>
-        <li class="sidebar-nav-item">
-          <a class="js-scroll-trigger" href="#team">Team</a>
-        </li>
-      </ul>
-    </nav>
-
     <div class="container-fluid">
       <div class="row">
         <div class="col-md-12">
@@ -73,7 +48,7 @@
             <header style="background: url("{% static "img/bg-dotted.jpg" %}");" id="headeshala">
               <div class="container text-center my-auto" >
                 <div class="row">
-                  <div class="col-md-12" style="padding-top: 5%; font-style: italic;" id="quote">
+                  <div class="col-md-12" style="padding-top: 5%; font-family: 'Play', sans-serif;">
                     <h3>“Dream is not the thing you see in sleep but is that thing that doesn't let you sleep”</h3>
                       <h3 style="text-align: right;">- APJ Abdul Kalam</h3>
                   </div>
@@ -85,10 +60,10 @@
                     </h3>
                     <br><br>
 
-                    <a class="js-scroll-trigger" href="{% url "quiz_index" %}"><button class="btn btn-xl" style="background-color: #33a9f7;"">Quizzes</button></a>
-                    <a class="js-scroll-trigger" href="{% url "listpdf" %}"><button class="btn btn-xl" style="background-color: #33a9f7;"">PDFs</button></a>
-                    <a class="js-scroll-trigger" href="#about"><button class="btn btn-xl" style="background-color: #33a9f7;"">APPs</button></a>
-                    <a class="js-scroll-trigger" href="#about"><button class="btn btn-xl" style="background-color: #33a9f7;"">Videos</button></a>
+                    <a class="js-scroll-trigger" href="{% url "quiz_index" %}"><button class="btn btn-xl" style="background-color: #33a9f7">Quizzes</button></a>
+                    <a class="js-scroll-trigger" href="{% url "listpdf" %}"><button class="btn btn-xl" style="background-color: #33a9f7;">PDFs</button></a>
+                    <a class="js-scroll-trigger" href="{% url "apps" %}"><button class="btn btn-xl" style="background-color: #33a9f7;">APPs</button></a>
+                    <a class="js-scroll-trigger" href="{% url "videos" %}"><button class="btn btn-xl" style="background-color: #33a9f7;">Videos</button></a>
                   </div>
                 </div>
               </div>
@@ -99,21 +74,31 @@
       </div>
     </div>
     
-    <div class="container text-center" style="position: relative;">
+    <div class="container-fluid text-center">
       <div class="row">
-          <div class="col-md-12" style="padding-top: 5%; font-style: italic;" id="quote">
-            <h3>“Dream is not the thing you see in sleep but is that thing that doesn't let you sleep.”</h3>
-              <h3 style="text-align: right;">- APJ Abdul Kalam</h3>
+          <div class="col-md-12" style="padding-top: 5%; font-family: 'Play', sans-serif;" id="quote">
+            <h3>“Dream is not the thing you see in sleep but is that thing that doesn't let you sleep”</h3>
+              <h3 style="text-align: right; margin-right: 20%;">- APJ Abdul Kalam</h3>
           </div>
-          <div class="col-md-12" style="padding: 25%;">
-            <img src="{% static "img/eshala_symbol.png" %}" class="img-responsive" style="background-color: white; padding: 2%; height: auto; width: 100%;">
-            <h3 class="mb-5">
-            </h3>
-            <br><br>
-            <a class="js-scroll-trigger" href="{% url "quiz_index" %}"><button class="btn btn-xl" style="background-color: #33a9f7; margin: 1%;">QUIZZEs</button></a>
+      </div>
+      <div class="row">
+      	<div class="col-md-4" style="padding-top: 2%;" id="quote">
+      		<a href="{% url "quiz_index" %}"><img src="{% static "img/quizhome.jpg" %}" class="img-responsive" style="background-color: white; height: auto; width: 70%;"></a>
+      	</div>
+	    <div class="col-md-4" style="padding-top: 15%;">
+	      <img src="{% static "img/eshala_symbol.png" %}" class="img-responsive" style="background-color: white; height: auto; width: 100%;">
+	      <br><br>
+	    </div>
+        <div class="col-md-4" style="padding-top: 12%;" id="quote">
+      		<a href="{% url "listpdf" %}"><img src="{% static "img/pdfhome.png" %}" class="img-responsive" style="background-color: white; height: auto; width: 50%;"></a>
+      	</div>
+       </div>
+       <div class="row">
+           <div class="col-md-12">
+            <a class="js-scroll-trigger" href="{% url "quiz_index" %}"><button class="btn btn-xl" style="background-color: #33a9f7; font-weight: ">QUIZZes</button></a>
             <a class="js-scroll-trigger" href="{% url "listpdf" %}"><button class="btn btn-xl" style="background-color: #33a9f7;"">PDFs</button></a>
-            <a class="js-scroll-trigger" href="#about"><button class="btn btn-xl" style="background-color: #33a9f7;margin: 1%;">APPs</button></a>
-            <a class="js-scroll-trigger" href="#about"><button class="btn btn-xl" style="background-color: #33a9f7;margin: 1%;">VIDEOs</button></a>
+            <a class="js-scroll-trigger" href="{% url "apps" %}"><button class="btn btn-xl" style="background-color: #33a9f7;"">APPs</button></a>
+            <a class="js-scroll-trigger" href="{% url "videos" %}"><button class="btn btn-xl" style="background-color: #33a9f7;"">VIDEOs</button></a>
           </div>
           <div class="overlay"></div>
         </div> 
@@ -125,73 +110,12 @@
     <section class="content-section bg-light" id="about">
       <div class="container text-center">
         <div class="row">
-          <div class="col-lg-10 col-lg-offset-2 mx-auto" style="background-color: #33a9f7; padding: 5%; margin-top: 5%;">
+          <div class="col-lg-10 col-lg-offset-2 mx-auto" style="background-color: #33a9f7; padding: 5%; margin-top: 15%;">
             <h2 style="text-decoration: underline;">Our Motive</h2>
             <p style="font-size: 25px;">We are on a mission to share Knowledge and change the Learning Process with   offering Online education from last mile of India i.e. Rural India.
             eShala runs various leading Web portal and Educational Mobile app with aim to offer complete education package for various competitive examinations at FREE of cost through team of volunteers working from Village, Small Town and Metropolitan cities.
             </p>
             
-          </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- Apps -->
-    <section class="content-section" id="portfolio">
-      <div class="container">
-        <div class="content-section-heading text-center">
-          <h2 class="mb-5">Applications</h2>
-        </div>
-        <div class="row no-gutters">
-        <!-- app names with pic-->
-        <div class="col-md-4" style="text-align: center;">
-          <a href="https://play.google.com/store/apps/details?id=com.csurender.dune.indiagk&hl=en">
-
-              <img src="{% static "img/indiagk.png" %}" class="img-responsive" height="70%" width="50%">
-          </a>
-          <h4>India GK</h4>
-         </div>
-        
-          <div class="col-md-4" style="text-align: center;">
-            <a href="https://play.google.com/store/apps/details?id=com.csurender.dune.SamanyaGyan">
-
-              <img src="{% static "img/samnyagyan.png" %}" class="img-responsive" height="70%" width="50%">
-              </a>
-            <h4>सामान्य ज्ञान </h4>
-          </div>
-          
-        
-          <div class="col-md-4" style="text-align: center;">
-            <a href="https://play.google.com/store/apps/details?id=com.csurender.computer">
-              <img src="{% static "img/computergk.png" %}" class="img-responsive" height="70%" width="50%">
-            </a>
-            <h4>Computer GK</h4>
-          </div>
-      
-        <div class="col-md-4" style="text-align: center;">
-            <a href="https://play.google.com/store/apps/details?id=com.csurender.android.rajasthangk">
-              <img src="{% static "img/rajgk.png" %}" class="img-responsive" height="70%" width="50%">
-            </a>
-            <h4>Rajasthan GK</h4>
-          </div>        
-        
-        <div class="col-md-4" style="text-align: center;">
-          <a href="https://play.google.com/store/apps/details?id=eshala.js">
-            <img src="{% static "img/jsguide.png" %}" class="img-responsive" height="70%" width="50%">
-          </a>
-          <h4>Javascript Guide</h4>
-        </div>
-    
-          
-          <div class="col-md-4" style="text-align: center;">
-            <a href="https://play.google.com/store/apps/details?id=com.dunelabs.csurender.everydayscience">
-              <img src="{% static "img/sciencegk.png" %}" class="img-responsive" height="70%" width="50%">
-            </a>
-            <h4>Science GK</h4>
-          </div>
-          <div class="col-md-12" style="text-align: center;">
-            <div class="col-lg-10 col-lg-offset-2 mx-auto" style="margin-top: 5%;">
-            <a class="js-scroll-trigger" href="https://play.google.com/store/apps/collection/cluster?clp=igM4ChkKEzkwNDgxNjQ2ODU4MTUyNzA1NDUQCBgDEhkKEzkwNDgxNjQ2ODU4MTUyNzA1NDUQCBgDGAA%3D:S:ANO1ljJDsRE"><button class="btn btn-xl" style="background-color: #33a9f7;"">Find more apps developed by eShala</button></a>
           </div>
           </div>
         </div>
@@ -247,49 +171,6 @@
 
     
 
-    <!-- Call to Action -->
-    <section class="content-section" id="team">
-      <div class="container text-center">
-        <h1 class="mb-4">Team</h1>
-        <div class="row" style="margin-top: 5%;">
-          <div class="col-md-4">
-
-            <img src="{% static "img/surenderji.png" %}" class="img-responsive" style="border-radius: 50%;" height="200px" width="200px">
-
-            <h4 style="margin-top: 5%;">Surender Choudhary</h4>
-              <a href="https://www.facebook.com/surender.choudhary">
-                <i class="icon-social-facebook"> </i>
-              </a>
-              <a href="https://www.linkedin.com/in/surender-choudhary/">
-                <i class="icon-social-linkedin"> </i>         
-              </a>
-          </div>
-          <div class="col-md-4">
-
-            <img src="{% static "img/kartarji.png" %}" class="img-responsive" style="border-radius: 50%;" height="200px" width="200px">
-
-            <h4 style="margin-top: 5%;">Kartar Moondwaria</h4>
-             <a href="https://www.facebook.com/kartarjat">
-                <i class="icon-social-facebook"> </i>
-              </a>
-              <a href="https://www.linkedin.com/in/kartar-moondwaria-252730b/">
-                <i class="icon-social-linkedin"> </i>         
-              </a>
-          </div>
-          <div class="col-md-4">
-            <img src="{% static "img/sinwar.jpg" %}" class="img-responsive" style="border-radius: 50%;" height="200px" width="200px">
-
-            <h4 style="margin-top: 5%;">Sinwar Prem</h4>
-            <a href="https://www.facebook.com/sinwar.prem">
-                <i class="icon-social-facebook"> </i>
-              </a>
-              <a href="https://www.linkedin.com/in/premsinwar/">
-                <i class="icon-social-linkedin"> </i>         
-              </a>
-          </div>
-        </div>
-      </div>
-    </section>
 
     <!-- Footer -->
     <footer class="footer text-center" id="contact">

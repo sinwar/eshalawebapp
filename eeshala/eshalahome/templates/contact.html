@@ -1,0 +1,121 @@
+{% load static %}
+{% load i18n %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>eShala</title>
+    <link rel="icon" href="img/pencil.jpg">
+
+    <!-- meta tags for facebook share-->
+    <meta property="og:title" content="eShala - learn Anything. Anywhere">
+    <meta property="og:description" content="We are on a mission to share Knowledge and change the Learning Process with offering Online education from last mile of India">
+    <meta property="og:image" content="https://sinwar.github.io/webeshala/img/wall.jpg">
+    <meta property="og:url" content="http://eshala.org">
+
+    <!-- meta tag to detect mobile devices -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Bootstrap Core CSS -->
+
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+    <link href="{% static "vendor/simple-line-icons/css/simple-line-icons.css" %}" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Play|Roboto" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="{% static "css/stylish-portfolio.css" %}" rel="stylesheet">
+    <link href="{% static "css/base.css" %}" rel="stylesheet">
+
+  </head>
+
+  <body id="page-top">
+
+		<div class="container">
+		  <div class="row">
+		    <div class="col-md-4">
+		      <img src="{% static "img/eshala_symbol.png" %}" height="50%" width="50%" style="padding: 5%;">
+		    </div>
+		  </div>
+		</div>
+		<nav class="navbar">
+		  <div class="container-fluid">
+		        <ul class="nav navbar-nav nav-page">
+		            <li>
+		                <a href="{% url 'quiz_index' %}" id="account_notification" ><i class="fa fa-question-circle-o" style="font-size:20px; margin-right: 7px;"></i> {% trans "QUIZ" %} </a> 
+		            </li>
+		            <li>
+		                <a href="{% url "listpdf" %}"> <i class="fa fa-file-text-o" style="font-size:20px; margin-right: 7px;"></i> {% trans "PDF" %}</a>
+		            </li>
+		            <li>
+		                <a href="{% url "apps" %}"> <i class="fa fa-android" style="font-size:20px; margin-right: 7px;"></i> {% trans "APPS" %}</a>
+		            </li> 
+		       
+		            <li>
+		                <a href="{% url "videos" %}">  <i class="fa fa-youtube-play" style="font-size:20px; margin-right: 7px;"></i>{% trans "VIDEOS" %}</a>
+		            </li> 
+		            <li class="active">
+		              <a href="{% url "contact" %}"><i class="fa fa-phone" style="font-size:20px; margin-right: 7px;"></i>{% trans "CONTACT" %}</a>
+		            </li>
+		        </ul>
+		      </div>
+		</nav>
+
+		<!-- Call to Action -->
+	    <section>
+	      <div class="container text-center" style="font-family: font-family: 'Play', sans-serif;">
+	        <h2 class="mb-4">ESHALA TEAM</h2>
+	        <div class="row" style="margin-top: 8%;">
+	          <div class="col-md-4">
+
+	            <img src="{% static "img/surenderji.png" %}" class="img-responsive center" style="border-radius: 50%;" height="200px" width="200px">
+
+	            <h4 style="margin-top: 5%;">Surender Choudhary</h4>
+	              <a href="https://www.facebook.com/surender.choudhary">
+	                <i class="icon-social-facebook"> </i>
+	              </a>
+	              <a href="https://www.linkedin.com/in/surender-choudhary/">
+	                <i class="icon-social-linkedin"> </i>         
+	              </a>
+	          </div>
+	          <div class="col-md-4">
+
+	            <img src="{% static "img/kartarji.png" %}" class="img-responsive center" style="border-radius: 50%;" height="200px" width="200px">
+
+	            <h4 style="margin-top: 5%;">Kartar Moondwaria</h4>
+	             <a href="https://www.facebook.com/kartarjat">
+	                <i class="icon-social-facebook"> </i>
+	              </a>
+	              <a href="https://www.linkedin.com/in/kartar-moondwaria-252730b/">
+	                <i class="icon-social-linkedin"> </i>         
+	              </a>
+	          </div>
+	          <div class="col-md-4">
+	            <img src="{% static "img/sinwar.jpg" %}" class="img-responsive center" style="border-radius: 50%;" height="200px" width="200px">
+
+	            <h4 style="margin-top: 5%;">Sinwar Prem</h4>
+	            <a href="https://www.facebook.com/sinwar.prem">
+	                <i class="icon-social-facebook"> </i>
+	              </a>
+	              <a href="https://www.linkedin.com/in/premsinwar/">
+	                <i class="icon-social-linkedin"> </i>         
+	              </a>
+	          </div>
+	        </div>
+	      </div>
+	    </section>
+
+
+		
+	</body>

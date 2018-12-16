@@ -40,3 +40,13 @@ def detailpdf(request, pk):
 	pdftitle = pdf.title
 
 	return render(request, 'renderpdf.html', {'pdffile':pdffile, 'pdftitle': pdftitle})
+
+
+def appsview(request):
+	return render(request, 'apps.html')
+
+def videoview(request):
+	return render(request, 'videos.html')
+
+def contactview(request):
+	return render(request, 'contact.html')

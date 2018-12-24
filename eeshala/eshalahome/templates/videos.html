@@ -37,6 +37,10 @@
     <link href="{% static "css/stylish-portfolio.css" %}" rel="stylesheet">
     <link href="{% static "css/base.css" %}" rel="stylesheet">
 
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
   </head>
 
   <body id="page-top">
@@ -44,12 +48,23 @@
 		<div class="container">
 		  <div class="row">
 		    <div class="col-md-4">
-		      <img src="{% static "img/eshala_symbol.png" %}" height="50%" width="50%" style="padding: 5%;">
+		     	<a href="{% url 'home' %}">
+		      		<img src="{% static "img/eshala_symbol.png" %}" height="50%" width="50%" style="padding: 5%;">
+		    	</a>
 		    </div>
 		  </div>
 		</div>
 		<nav class="navbar">
 		  <div class="container-fluid">
+		  	<div class="navbar-header">
+	          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+	            <span class="icon-bar"></span>
+	            <span class="icon-bar"></span>
+	            <span class="icon-bar"></span>                        
+	          </button>
+	        </div>
+	        
+	        <div class="collapse navbar-collapse" id="myNavbar">
 		        <ul class="nav navbar-nav nav-page">
 		            <li>
 		                <a href="{% url 'quiz_index' %}" id="account_notification" ><i class="fa fa-question-circle-o" style="font-size:20px; margin-right: 7px;"></i> {% trans "QUIZ" %} </a> 
@@ -68,8 +83,24 @@
 		              <a href="{% url "contact" %}"><i class="fa fa-phone" style="font-size:20px; margin-right: 7px;"></i>{% trans "CONTACT" %}</a>
 		            </li>
 		        </ul>
-		      </div>
+		       </div>
+		     </div>
 		</nav>
+
+		<div class="container text-center">
+
+          <h2 class="mb-4">VIDEOS</h2>
+          <br><br>
+			<div class="row">
+				<iframe class="col-md-12" height="315" src="https://www.youtube.com/embed/5KDUPGDf21A" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+				</iframe>
+			</div>
+			<div class="row" style="margin-top: 2%;">
+				<div class="col-md-12">
+					<h4>Januaray 2018 Current affairs</h4>
+				</div>
+			</div>
+		</div>
 
 
 		

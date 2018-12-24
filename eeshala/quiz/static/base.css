@@ -58,3 +58,6 @@ input[name="answers"]{
 	margin-right: 10px;
 }
 
+.navbar-toggle .icon-bar {
+	background-color: #999999;
+}

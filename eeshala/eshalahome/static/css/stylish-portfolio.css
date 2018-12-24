@@ -386,19 +386,39 @@ a:hover, a:focus, a:active {
   color: #ecb807 !important;
 }
 
-.btn-xl {
-    padding: 20px 30px;
-    font-size: 30px;
-    border-radius: 10px;
-    margin: 10px;
-}
+
 
 @media screen and (min-width: 0px) and (max-width: 700px) {
       #quote {    display: none;  }
       #headeshala { display: block; }
+      .btn-xl {
+        padding: 10px 15px;
+        font-size: 15px;
+        border-radius: 5px;
+        margin: 5px;
+      }
+      .homeimage {
+        background-color: white;
+        height: auto;
+        width: 40%;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
 }
 
 @media screen and (min-width: 701px) and (max-width: 3000px) {
       #quote {    display: block;  }
       #headeshala {display: none;}
+      .btn-xl {
+          padding: 15px 25px;
+          font-size: 20px;
+          border-radius: 5px;
+          margin: 15px;
+      }
+      .homeimage {
+        background-color: white;
+        height: auto;
+        width: 70%;
+      }
 }

@@ -10,3 +10,4 @@ six==1.11.0
 toml==0.10.0
 tox==3.5.3
 virtualenv==16.1.0
+django-widget-tweaks==1.4.3

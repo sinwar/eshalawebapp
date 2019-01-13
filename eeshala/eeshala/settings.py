@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'true_false',
     'essay',
     'eshalahome',
+    'widget_tweaks',
 ]
 
 MIDDLEWARE_CLASSES = [

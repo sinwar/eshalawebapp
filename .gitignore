@@ -2,3 +2,4 @@ venv/*
 eeshala/db.sqlite3
 eeshala/quiz/__pycache__/*
 eeshala/eshalahome/__pycache__/*
+eshalahome/migrations/*

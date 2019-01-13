@@ -15,7 +15,7 @@ class ContactMessage(models.Model):
 	"""
 	model to save contact form data
 	"""
-	sendername = models.CharField(default="annonymous",
+	sendername = models.CharField(blank=True,
 	 							  max_length=200,
 	 							  verbose_name=_('Sender Name'))
 	senderemail = models.EmailField(max_length=400,

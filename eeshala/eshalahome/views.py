@@ -1,5 +1,7 @@
 from django.shortcuts import render
-from .models import pdfs
+from .models import pdfs, ContactMessage
+from .forms import ContactMessageForm
+from django.views.generic.edit import FormView, CreateView
 
 # Create your views here.
 
@@ -50,3 +52,14 @@ def videoview(request):
 
 def contactview(request):
 	return render(request, 'contact.html')
+
+
+# view for contact form 
+class ContactMessageCreate(CreateView):
+    template_name = "ContactMessage_create_form.html"
+    form_class = ContactMessageForm
+    success_url = '/contacted/'
+    model = ContactMessage
+    def form_valid(self, form):
+        form.instance.owner = self.request.user
+        return super(ContactMessageCreate, self).form_valid(form)

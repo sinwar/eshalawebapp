@@ -15,7 +15,7 @@ def listpdf(request):
 
 	"""
 
-	pdflist = pdfs.objects.all();
+	pdflist = pdfs.objects.all().order_by('-pk');
 	pkey = []
 	title = []
 	urls = []
